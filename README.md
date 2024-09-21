@@ -1,7 +1,7 @@
 # pythonfullstack
 Learn Python Full Stack Code, UI and API
 
-### **1\. Python Fundamentals**
+### **1\. Python as Framework**
 
 *   **Core Concepts:**
     
@@ -15,12 +15,7 @@ Learn Python Full Stack Code, UI and API
         
 *   **Recommended Resources:**
     
-    *   **Online Courses:**
-        
-        *   Coursera: Python for Everybody
-            
-        *   edX: Introduction to Computer Science using Python
-            
+              
     *   **Books:**
         
         *   "Automate the Boring Stuff with Python" by Al Sweigart
@@ -52,12 +47,7 @@ Learn Python Full Stack Code, UI and API
         
 *   **Recommended Resources:**
     
-    *   **Online Courses:**
-        
-        *   Django Girls Tutorial
-            
-        *   Codecademy: Learn Django
-            
+                
     *   **Books:**
         
         *   "Django 3 by Example" by Antonio Melé
@@ -87,12 +77,7 @@ Learn Python Full Stack Code, UI and API
         
 *   **Recommended Resources:**
     
-    *   **Online Courses:**
-        
-        *   FreeCodeCamp: Responsive Web Design
-            
-        *   MDN Web Docs
-            
+               
     *   **Books:**
         
         *   "Head First HTML and CSS" by Elizabeth Martello
@@ -120,12 +105,7 @@ Learn Python Full Stack Code, UI and API
         
 *   **Recommended Resources:**
     
-    *   **Online Courses:**
-        
-        *   SQLZoo
-            
-        *   LearnSQL.com
-            
+                
     *   **Books:**
         
         *   "SQL For Dummies" by Ben Forta
