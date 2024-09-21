@@ -113,7 +113,7 @@ Learn Python Full Stack Code, UI and API
 
 ### **5\. Full Stack Projects**
 
-*   **Build real-world applications:**
+*   **I am experience full stack technical consultant with real-world applications:**
     
     *   E-commerce website
         
