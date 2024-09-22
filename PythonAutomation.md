@@ -4,16 +4,15 @@ Python Automationify
 ### 1\. **File Renaming:**
 
 *   Renaming a batch of files with a consistent pattern, such as adding a prefix or suffix.
-    
 
 Python
 
-import os
+	import os
 
-for filename in os.listdir('.'):
-    if filename.endswith('.txt'):
-        new_name = 'new_' + filename
-        os.rename(filename, new_name)
+	for filename in os.listdir('.'):
+		if filename.endswith('.txt'):
+			new_name = 'new_' + filename
+			os.rename(filename, new_name)
 
 ### 2\. **Data Scraping:**
 
@@ -22,61 +21,59 @@ for filename in os.listdir('.'):
 
 Python
 
-import requests
-from bs4 import BeautifulSoup
+	import requests
+	from bs4 import BeautifulSoup
 
-url = 'https://www.example.com'
-response = requests.get(url)
-soup = BeautifulSoup(response.text, 'html.parser')
+	url = 'https://www.example.com'
+	response = requests.get(url)
+	soup = BeautifulSoup(response.text, 'html.parser')
 
-prices = soup.find_all('span', class_='product-price')
-for price in prices:
-    print(price.text)
+	prices = soup.find_all('span', class_='product-price')
+	for price in prices:
+		print(price.text)
 
 ### 3\. **Email Automation:**
 
 *   Sending automated emails based on specific triggers, like scheduling reminders or sending reports.
-    
 
 Python
 
-import smtplib
-from email.mime.text import MIMEText
+	import smtplib
+	from email.mime.text import MIMEText
 
-sender_email = 'your_email@example.com'
-receiver_email = 'recipient_email@example.com'
-password = 'your_password'
+	sender_email = 'your_email@example.com'
+	receiver_email = 'recipient_email@example.com'
+	password = 'your_password'
 
-message = MIMEText('This is an automated email.')
-message['From'] = sender_email
-message['To'] = receiver_email
-message['Subject'] = 'Automated Email'
+	message = MIMEText('This is an automated email.')
+	message['From'] = sender_email
+	message['To'] = receiver_email
+	message['Subject'] = 'Automated Email'
 
-with smtplib.SMTP('smtp.gmail.com', 587) as server:
-    server.starttls()
-    server.login(sender_email, password)
-    server.sendmail(sender_email, receiver_email, message.as_string())
+	with smtplib.SMTP('smtp.gmail.com', 587) as server:
+		server.starttls()
+		server.login(sender_email, password)
+		server.sendmail(sender_email, receiver_email, message.as_string())
 
 ### 4\. **Text Message Automation:**
 
 *   Sending automated text messages, such as appointment confirmations or weather alerts.
     
-
 Python
 
 import twilio
 
-# Replace with your Twilio account SID and auth token
-account_sid = 'YOUR_ACCOUNT_SID'
-auth_token = 'YOUR_AUTH_TOKEN'
+	# Replace with your Twilio account SID and auth token
+	account_sid = 'YOUR_ACCOUNT_SID'
+	auth_token = 'YOUR_AUTH_TOKEN'
 
-client = twilio.rest.Client(account_sid, auth_token)
+	client = twilio.rest.Client(account_sid, auth_token)
 
-message = client.messages.create(
-    to='recipient_phone_number',
-    from_='your_twilio_number',
-    body='This is an automated text message.'
-)
+	message = client.messages.create(
+		to='recipient_phone_number',
+		from_='your_twilio_number',
+		body='This is an automated text message.'
+	)
 
 ### 5\. **Excel Spreadsheet Automation:**
 
@@ -85,16 +82,16 @@ message = client.messages.create(
 
 Python
 
-import openpyxl
+	import openpyxl
 
-workbook = openpyxl.load_workbook('your_workbook.xlsx')
-sheet = workbook.active
+	workbook = openpyxl.load_workbook('your_workbook.xlsx')
+	sheet = workbook.active
 
-# Perform operations on the spreadsheet
-sheet['A1'] = 'New Value'
-sheet.insert_rows(1, 2)
+	# Perform operations on the spreadsheet
+	sheet['A1'] = 'New Value'
+	sheet.insert_rows(1, 2)
 
-workbook.save('updated_workbook.xlsx')
+	workbook.save('updated_workbook.xlsx')
 
 ### 6\. **PDF Manipulation:**
 
@@ -103,80 +100,73 @@ workbook.save('updated_workbook.xlsx')
 
 Python
 
-import PyPDF2
+	import PyPDF2
 
-pdf_reader = PyPDF2.PdfReader('input.pdf')
-text = pdf_reader.pages[0].extract_text()
-print(text)
+	pdf_reader = PyPDF2.PdfReader('input.pdf')
+	text = pdf_reader.pages[0].extract_text()
+	print(text)
 
 ### 7\. **Web Automation:**
 
 *   Interacting with web pages, such as filling out forms, clicking buttons, or downloading files.
-    
 
 Python
 
-from selenium import webdriver
+	from selenium import webdriver
 
-driver = webdriver.Chrome()
-driver.get('https://www.example.com')
+	driver = webdriver.Chrome()
+	driver.get('https://www.example.com')
 
-# Find elements and interact with them
-element = driver.find_element_by_id('username')
-element.send_keys('your_username')
+	# Find elements and interact with them
+	element = driver.find_element_by_id('username')
+	element.send_keys('your_username')
 
-# ... other actions
-
-driver.quit()
+	driver.quit()
 
 ### 8\. **Image Manipulation:**
 
 *   Resizing, cropping, or adding watermarks to images.
-    
 
 Python
 
-from PIL import Image
+	from PIL import Image
 
-image = Image.open('image.jpg')
-resized_image = image.resize((200, 200))
-resized_image.save('resized_image.jpg')
+	image = Image.open('image.jpg')
+	resized_image = image.resize((200, 200))
+	resized_image.save('resized_image.jpg')
 
 ### 9\. **Desktop Automation:**
 
 *   Automating repetitive tasks on your desktop, such as moving files, opening applications, or controlling the mouse and keyboard.
-    
-
 Python
 
-import pyautogui
+	import pyautogui
 
-# Move the mouse to a specific location
-pyautogui.moveTo(100, 100)
+	# Move the mouse to a specific location
+	pyautogui.moveTo(100, 100)
 
-# Click the mouse
-pyautogui.click()
+	# Click the mouse
+	pyautogui.click()
 
-# Type text
-pyautogui.typewrite('Hello, world!')
+	# Type text
+	pyautogui.typewrite('Hello, world!')
 
 ### 10\. **Data Cleaning:**
 
 *   Cleaning and preparing data for analysis, such as removing duplicates, handling missing values, or formatting data consistently.
-    
 
 Python
 
-import pandas as pd
+	import pandas as pd
 
-data = pd.read_csv('data.csv')
+	data = pd.read_csv('data.csv')
 
-# Clean the data
-data = data.dropna()  # Remove missing values
-data = data.drop_duplicates()  # Remove duplicates
+	# Clean the data
+	data = data.dropna()  # Remove missing values
+	data = data.drop_duplicates()  # Remove duplicates
 
-# Format the data
-data['date'] = pd.to_datetime(data['date'])
+	# Format the data
+	data['date'] = pd.to_datetime(data['date'])
 
-# Save the cleaned data
-data.to_csv('cleaned_data.csv', index=False)
+	# Save the cleaned data
+	data.to_csv('cleaned_data.csv', index=False)
